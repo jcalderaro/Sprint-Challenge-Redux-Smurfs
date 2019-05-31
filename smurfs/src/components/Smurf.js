@@ -35,3 +35,4 @@ export default connect(null,{remove})(Smurf);
 ////////////////////////////////////////
 
 /* Complete */
+
