@@ -27,14 +27,14 @@ export function addSmurf(smurf) {
   console.log('addSmurfs has triggered.');
   return (dispatch) => {
     dispatch({type: "LOAD"});
-    axios.post('https://localhost:3000/smurfs/',smurf)
+    axios.post('https://localhost:3333/smurfs/',smurf)
          .then( res => {
             console.log("post successful ", res.data[res.data.length-1]);
             dispatch({
               type: "ADD", payload: res.data[res.data.length-1]
             })
          })
-         .catch( err => console.log('error in adding the smurf: ',err));
+         .catch( err => console.log('error', smurf));
   }
 }
 
